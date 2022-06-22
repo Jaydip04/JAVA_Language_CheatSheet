@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Potta+One&family=Roboto:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./prism.css">
+    <script src="./prism.js"></script>
+    <link rel="stylesheet" href="./style.css" />
+    <title>JAVA_Language_CheatSheet</title>
+    <link rel="icon" type="image/x-icon" href="./logo/Logo.png">
+  </head>
+  <body>
+    <nav>
+      <span class="logo"><img src="./copy.svg" alt="" /></span>
+      <div class="content center">This is <span>JAVA language</span> CheatSheet is For You !</div>
+    </nav>
+    <div class="container">
+      <ol>
+        <li>JAVA Simple program :
+            <pre class="language-js">
+              <code>
+class Simple{  
+  public static void main(String args[]){  
+    System.out.println("Hello Java");  
+  }  
+} </code>
+</pre>
+        </li>
+
+        <li><p>Valid Java main() method signature :</p>
+          <pre class="language-js">
+            <code>
+public static void main(String[] args)  
+public static void main(String []args)  
+public static void main(String args[])  
+public static void main(String... args)  
+static public void main(String[] args)  
+public static final void main(String[] args)  
+final public static void main(String[] args)  
+final strictfp public static void main(String[] args)</code>
+          </pre>
+      </li>
+
+      <li>Syntax of variable :
+        <pre class="language-js">
+          <code>
+1. data_type variable_name; 
+1. data_type variable_name = value; </code>
+</pre>
+    </li>
+
+        <li>Syntax of the if statement :
+          <pre class="language-js">
+            <code>
+if(condition) {    
+  statement 1; //executes when condition is true   
+}</code>
+</pre>
+      </li>
+
+        <li>Syntax of the if-else statement :
+          <pre class="language-js">
+            <code>
+if(condition) {    
+  statement 1; //executes when condition is true   
+} else{  
+  statement 2; //executes when condition is false   
+}</code>
+</pre>
+      </li>
+
+        <li>Syntax of the if else-if ladder statement :
+          <pre class="language-js">
+            <code>
+if(condition 1) {    
+  statement 1; //executes when condition 1 is true   
+} else if(condition 2) {  
+  statement 2; //executes when condition 2 is true   
+} 
+...
+else {  
+  statement 2; //executes when all the conditions are false   
+}</code>
+</pre>
+      </li>
+
+        <li>Syntax of Nested if-statement :
+          <pre class="language-js">
+            <code>
+if(condition 1) {    
+  statement 1; //executes when condition 1 is true   
+    if(condition 2) {  
+      statement 2; //executes when condition 2 is true   
+    }  
+    else{  
+      statement 2; //executes when condition 2 is false   
+    }  
+}</code>
+</pre>
+      </li>
+
+        <li>Syntax of switch statement :
+          <pre class="language-js">
+            <code>
+switch (expression){  
+  case value1:  
+    statement1;  
+    break;  
+  .  
+  .  
+  .  
+  case valueN:  
+    statementN;  
+    break;  
+  default:  
+    default statement; 
+    break; 
+}  </code>
+</pre>
+      </li>
+
+        <li>Syntax of Nested switch case statement :
+          <pre class="language-js">
+            <code>
+switch(expression){    
+  case value1:    
+    //code to be executed;    
+    break;  //optional  
+  case value2:    
+    switch(expression){    
+      case value1:    
+        //code to be executed;    
+        break;  //optional  
+      case value2:    
+        //code to be executed;    
+        break;  //optional  
+        ......                     
+      default:     
+        //code to be executed if all cases are not matched;    
+      }
+    ......                
+  default:     
+    //code to be executed if all cases are not matched;    
+}</code>
+</pre>
+      </li>
+
+      <li>Syntax of do-while loop :
+        <pre class="language-js">
+          <code>
+do{    
+  //statements    
+} while (condition);</code>
+</pre>
+    </li>
+
+      <li>Syntax of while loop :
+        <pre class="language-js">
+          <code>
+while(condition){    
+  //looping statements    
+}</code>
+</pre>
+    </li>
+
+      <li>Syntax of for loop :
+        <pre class="language-js">
+          <code>
+for(initialization, condition, increment/decrement) {    
+  //block of statements    
+}  </code>
+</pre>
+    </li>
+
+      <li>Syntax of for-each loop :
+        <pre class="language-js">
+          <code>
+for(data_type var : array_name/collection_name){    
+  //statements    
+}  </code>
+</pre>
+    </li>
+
+      <li>Syntax of nested do..while loop :
+        <pre class="language-js">
+          <code>
+do  
+{  
+    do  
+    {   
+      // inner loop statements.  
+    }while(condition);  
+    // outer loop statements.  
+}while(condition);</code>
+</pre>
+    </li>
+
+      <li>Syntax of nested while loop :
+        <pre class="language-js">
+          <code>
+while(condition)  
+{  
+  while(condition)  
+  {  
+    // inner loop statements.  
+  }  
+  // outer loop statements.  
+}  </code>
+</pre>
+    </li>
+
+      <li>Syntax of nested for loop :
+        <pre class="language-js">
+          <code>
+for (initialization; condition; update)   
+{  
+  for(initialization; condition; update)  
+  {  
+    // inner loop statements.  
+  }  
+  // outer loop statements.  
+}  </code>
+</pre>
+    </li>
+
+      <li>Syntax of infinite do..while loop :
+        <pre class="language-js">
+          <code>
+do  
+{  
+  // body of the loop..  
+}while(1);  </code>
+</pre>
+    </li>
+
+      <li>Syntax of infinite while loop :
+        <pre class="language-js">
+          <code>
+while(1)  
+{  
+  // body of the loop..  
+}  </code>
+</pre>
+    </li>
+
+      <li>Syntax of infinite for loop :
+        <pre class="language-js">
+          <code>
+for(; ;)  
+{  
+// body of the for loop.  
+}  </code>
+</pre>
+    </li>
+
+      <li>Syntax of break statement :
+        <pre class="language-js">
+          <code>
+//loop or switch case   
+break;</code>
+</pre>
+    </li>
+
+      <li>Syntax of continue statement :
+        <pre class="language-js">
+          <code>
+//loop statements  
+continue;  
+//some lines of the code which is to be skipped  </code>
+</pre>
+    </li>
+
+      <li>Syntax to declare a class :
+       <pre class="language-js">
+class &#60;class_name&#62;{  
+  field;  
+  method;  
+}</code>
+</pre>
+    </li>
+
+      <li>Creating a main() method inside the class :
+       <pre class="language-js">
+//Java Program to illustrate how to define a class and fields  
+//Defining a Student class.  
+class Student{  
+  //defining fields  
+  int id;//field or data member or instance variable  
+  String name;  
+  //creating main method inside the Student class  
+public static void main(String args[]){  
+  //Creating an object or instance  
+  Student s1=new Student();//creating an object of Student  
+  //Printing values of the object  
+  System.out.println(s1.id);//accessing member through reference variable  
+  System.out.println(s1.name);  
+  }  
+}</code>
+</pre>
+    </li>
+
+      <li>Creating a main() method outside the class :
+       <pre class="language-js">
+//Java Program to demonstrate having the main method in   
+//another class  
+//Creating Student class.  
+class Student{  
+  int id;  
+  String name;  
+}  
+//Creating another class TestStudent1 which contains the main method  
+class TestStudent1{  
+public static void main(String args[]){  
+  Student s1=new Student();  
+  System.out.println(s1.id);  
+  System.out.println(s1.name);  
+  }  
+}</code>
+</pre>
+    </li>
+
+      <li>Initialize the object through a reference variable :
+       <pre class="language-js">
+class Student{  
+  int id;  
+  String name;  
+  }  
+class TestStudent2{  
+public static void main(String args[]){  
+    Student s1=new Student();  
+    s1.id=101;  
+    s1.name="Sonoo";  
+    System.out.println(s1.id+" "+s1.name);//printing members with a white space  
+  }  
+}</code>
+</pre>
+    </li>
+
+      <li>Initialize the multiple object through a reference variable :
+       <pre class="language-js">
+class Student{  
+  int id;  
+  String name;  
+  }  
+class TestStudent3{  
+public static void main(String args[]){  
+    //Creating objects  
+    Student s1=new Student();  
+    Student s2=new Student();  
+    //Initializing objects  
+    s1.id=101;  
+    s1.name="Sonoo";  
+    s2.id=102;  
+    s2.name="Amit";  
+    //Printing data  
+    System.out.println(s1.id+" "+s1.name);  
+    System.out.println(s2.id+" "+s2.name);  
+  }  
+} </code>
+</pre>
+    </li>
+
+      <li>Initialize the multiple object through method :
+       <pre class="language-js">
+class Student{  
+  int rollno;  
+  String name;  
+  void insertRecord(int r, String n){  
+    rollno=r;  
+    name=n;  
+  }  
+  void displayInformation(){System.out.println(rollno+" "+name);
+  }  
+}  
+class TestStudent4{  
+public static void main(String args[]){  
+    Student s1=new Student();  
+    Student s2=new Student();  
+    s1.insertRecord(111,"Karan");  
+    s2.insertRecord(222,"Aryan");  
+    s1.displayInformation();  
+    s2.displayInformation();  
+  }  
+} </code>
+</pre>
+    </li>
+
+      <li>Initialize the multiple object through a constructor :
+       <pre class="language-js">
+class Employee{  
+  int id;  
+  String name;  
+  float salary;  
+  void insert(int i, String n, float s) {  
+      id=i;  
+      name=n;  
+      salary=s;  
+  }  
+  void display(){System.out.println(id+" "+name+" "+salary);
+  }  
+}  
+public class TestEmployee {  
+public static void main(String[] args) {  
+  Employee e1=new Employee();  
+  Employee e2=new Employee();  
+  Employee e3=new Employee();  
+  e1.insert(101,"ajeet",45000);  
+  e2.insert(102,"irfan",25000);  
+  e3.insert(103,"nakul",55000);  
+  e1.display();  
+  e2.display();  
+  e3.display();  
+  }  
+}</code>
+</pre>
+    </li>
+
+      <li>Syntax of default constructor :
+       <pre class="language-js">
+&#60;class_name&#62;(){
+  //code to be executed  
+} </code>
+</pre>
+    </li>
+
+      <li>Created the constructor with parameters :
+       <pre class="language-js">
+//Java Program to demonstrate the use of the parameterized constructor.  
+class Student4{  
+    int id;  
+    String name;  
+    //creating a parameterized constructor  
+    Student4(int i,String n){  
+    id = i;  
+    name = n;  
+    }  
+    //method to display the values  
+    void display(){System.out.println(id+" "+name);
+}  
+    
+public static void main(String args[]){  
+    //creating objects and passing values  
+    Student4 s1 = new Student4(111,"Karan");  
+    Student4 s2 = new Student4(222,"Aryan");  
+    //calling method to display the values of object  
+    s1.display();  
+    s2.display();  
+    }  
+} </code>
+</pre>
+    </li>
+
+      <li>Created the Constructor Overloading with parameters :
+       <pre class="language-js">
+//Java program to overload constructors  
+class Student5{  
+    int id;  
+    String name;  
+    int age;  
+    //creating two arg constructor  
+    Student5(int i,String n){  
+    id = i;  
+    name = n;  
+    }  
+    //creating three arg constructor  
+    Student5(int i,String n,int a){  
+    id = i;  
+    name = n;  
+    age=a;  
+    }  
+    void display(){System.out.println(id+" "+name+" "+age);
+}  
+    
+public static void main(String args[]){  
+    Student5 s1 = new Student5(111,"Karan");  
+    Student5 s2 = new Student5(222,"Aryan",25);  
+    s1.display();  
+    s2.display();  
+    }  
+} </code>
+</pre>
+    </li>
+
+      <li>Created the Copy Constructor with parameters :
+       <pre class="language-js">
+//Java program to initialize the values from one object to another object.  
+class Student6{  
+    int id;  
+    String name;  
+    //constructor to initialize integer and string  
+    Student6(int i,String n){  
+    id = i;  
+    name = n;  
+    }  
+    //constructor to initialize another object  
+    Student6(Student6 s){  
+    id = s.id;  
+    name =s.name;  
+    }  
+    void display(){System.out.println(id+" "+name);
+}  
+    
+public static void main(String args[]){  
+    Student6 s1 = new Student6(111,"Karan");  
+    Student6 s2 = new Student6(s1);  
+    s1.display();  
+    s2.display();  
+    }  
+} </code>
+</pre>
+    </li>
+    
+      <li>Created the Copying values without constructor :
+       <pre class="language-js">
+class Student7{  
+  int id;  
+  String name;  
+  Student7(int i,String n){  
+  id = i;  
+  name = n;  
+  }  
+  Student7(){
+
+  }  
+  void display(){System.out.println(id+" "+name);
+}  
+  
+public static void main(String args[]){  
+  Student7 s1 = new Student7(111,"Karan");  
+  Student7 s2 = new Student7();  
+  s2.id=s1.id;  
+  s2.name=s1.name;  
+  s1.display();  
+  s2.display();  
+  }  
+} </code>
+</pre>
+    </li>
+
+      <li>syntax of Java Inheritance :
+       <pre class="language-js">
+class Subclass-name extends Superclass-name  
+{  
+  //methods and fields  
+}</code>
+</pre>
+    </li>
+
+      <li>Created the Single Inheritance :
+       <pre class="language-js">
+class Animal{  
+  void eat(){System.out.println("eating...");
+  }  
+}  
+  class Dog extends Animal{  
+  void bark(){System.out.println("barking...");
+  }  
+}  
+class TestInheritance{  
+public static void main(String args[]){  
+  Dog d=new Dog();  
+  d.bark();  
+  d.eat();  
+  }
+}</code>
+</pre>
+    </li>
+
+      <li>Created the Multilevel Inheritance :
+       <pre class="language-js">
+class Animal{  
+  void eat(){System.out.println("eating...");
+  }  
+}  
+  class Dog extends Animal{  
+  void bark(){System.out.println("barking...");
+  }  
+}  
+class BabyDog extends Dog{  
+void weep(){System.out.println("weeping...");
+  }  
+}  
+class TestInheritance2{  
+public static void main(String args[]){  
+  BabyDog d=new BabyDog();  
+  d.weep();  
+  d.bark();  
+  d.eat();  
+  }
+} </code>
+</pre>
+    </li>
+
+      <li>Created the Hierarchical Inheritance :
+       <pre class="language-js">
+class Animal{  
+  void eat(){System.out.println("eating...");
+  }  
+}  
+  class Dog extends Animal{  
+  void bark(){System.out.println("barking...");
+  }  
+}  
+  class Cat extends Animal{  
+  void meow(){System.out.println("meowing...");
+  }  
+}  
+class TestInheritance3{  
+public static void main(String args[]){  
+  Cat c=new Cat();  
+  c.meow();  
+  c.eat();  
+  //c.bark();//C.T.Error  
+  }
+}</code>
+</pre>
+    </li>
+
+      <li>Syntax of 1-D array :
+       <pre class="language-js">
+dataType[] arr; (or)  
+dataType []arr; (or)  
+dataType arr[];</code>
+</pre>
+    </li>
+
+      <li>Syntax of 1-D array Instantiation of JAVA :
+       <pre class="language-js">
+arrayRefVar=new datatype[size];</code>
+</pre>
+    </li>
+
+      <li>Syntax of 2-D array :
+       <pre class="language-js">
+dataType[][] arrayRefVar; (or)  
+dataType [][]arrayRefVar; (or)  
+dataType arrayRefVar[][]; (or)  
+dataType []arrayRefVar[]; </code>
+</pre>
+    </li>
+
+    <li>Syntax of 2-D array Instantiation of JAVA :
+      <pre class="language-js">
+int[][] arr=new int[3][3];//3 row and 3 column</code>
+</pre>
+    </li>
+
+      <li>Syntax of string :
+       <pre class="language-js">
+char[] ch={'j','a','v','a'};  
+String s=new String(ch); (or)
+String s="java"; </code>
+</pre>
+    </li>
+
+      
